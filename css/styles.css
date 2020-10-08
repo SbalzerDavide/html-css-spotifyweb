@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* typography */
+ul{
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+.web-app{
+    height: 100vh;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.web-app .top-content{
+    display: flex;
+    flex-grow: 1;
+}
+
+
+
+/* SIDEBAR */
+.web-app .sidebar{
+    flex-basis: 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: silver;
+}
+
+.sidebar .sidebar-menu{
+    flex-grow: 1;
+    background-color: violet;
+}
+
+.sidebar .sidebar-bottom{   
+    flex-basis: 50px;
+    background-color: yellowgreen;
+
+}
+
+
+
+/* PAGE */
+.web-app .page{
+    flex-grow: 1;
+    background-color: slateblue;
+    position: relative;
+}
+
+.web-app .page-top-bar{
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    background-color: snow;
+    z-index: 1;
+    opacity: .6;
+}
+
+/* SCROLLABLE */
+.web-app .scrollable{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 50px 10px 5px;
+    background-color: tomato;
+    overflow: auto;
+}
+
+.scrollable .top-list{
+    display: flex;
+    justify-content: center;
+}
+
+.scrollable .top-list li{
+    padding: 10px 5px;
+}
+
+.scrollable .category-box{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.scrollable .category-box .box{
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    margin: 10px;
+}
+
+/* PLAYER */
+.web-app .player{
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50px;
+    background-color: seagreen;
+}
+
+.player .left,
+.player .right{
+    width: 150px;
+}
+
+.player .center{
+    width: 300px;
+}
+
+.player>div{
+    height: 100%;
+    background-color: thistle;
+
+}
+
+@media screen and (max-width:768px){
+    .web-app .sidebar{
+        flex-basis: 10px;
+
+    }
+
+    .sidebar .logo{
+        display: none;
+
+    }
+    
+
+}
