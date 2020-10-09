@@ -55,6 +55,9 @@ a:hover{
     color: #fff;
 }
 
+.circle{
+    border-radius: 50%;
+}
 
 
 
@@ -87,13 +90,29 @@ a:hover{
 
 .sidebar .sidebar-menu{
     flex-grow: 1;
-    background-color: violet;
+    background-color: #000;
 }
 
 .sidebar .sidebar-bottom{   
     flex-basis: 50px;
     background-color: yellowgreen;
 
+}
+
+.sidebar .logo img{
+    height: 35px;
+}
+
+.sidebar .playlist .new-playlist::before{
+    content: '+';
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background-color: #75787d;
+    
 }
 
 
@@ -157,7 +176,6 @@ a:hover{
 
 .scrollable .category-title{    
     margin-bottom: 20px;
-
 }
 
 .scrollable .category-box{
@@ -165,31 +183,6 @@ a:hover{
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
-
-.scrollable .box .icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, .6);
-    transition: opacity .4s;
-}
-
-.scrollable .category-box .box:hover .icon{ 
-    opacity: 1;
-}
-
-.scrollable .category-box .box:hover img{
-    transform: scale(1.2);
-}
-
-.scrollable .category-box i{
-    font-size: 40px;}
 
 .scrollable .category-box a{
     color: #fff;
@@ -209,8 +202,32 @@ a:hover{
     transition: transform .4s;
 }
 
-.scrollable .category-box .box img:hover{
+/* animation album */
+.scrollable .box .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    transition: opacity .4s;
+    cursor: pointer;
+}
+
+.scrollable .category-box .box:hover .icon{ 
+    opacity: 1;
+}
+
+.scrollable .category-box .box:hover img{
     transform: scale(1.2);
+}
+
+.scrollable .category-box i{
+    font-size: 40px;
 }
 
 /* PLAYER */
