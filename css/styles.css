@@ -10,9 +10,16 @@ body{
 }
 
 /* typography */
+h2{
+    line-height: 35px;
+
+}
+
 h3{
     font-size: 12px;
     font-weight: 500;
+    margin-top: 8px;
+    margin-bottom: 4px;
 }
 
 h4{
@@ -44,6 +51,10 @@ a:hover{
     text-align: center;
 }
 
+.color-white{
+    color: #fff;
+}
+
 
 
 
@@ -68,7 +79,7 @@ a:hover{
 
 /* SIDEBAR */
 .web-app .sidebar{
-    flex-basis: 100px;
+    flex-basis: 150px;
     display: flex;
     flex-direction: column;
     background-color: silver;
@@ -95,13 +106,31 @@ a:hover{
 }
 
 .web-app .page-top-bar{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     position: absolute;
     top: 0;
     height: 50px;
     width: 100%;
-    background-color: snow;
+    background-color: rgba(0, 0, 0, .8);
     z-index: 1;
     opacity: .6;
+}
+
+.page-top-bar .button{
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 5px 20px;
+    margin-right: 20px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    transition: transform .4s;
+}
+
+.page-top-bar .button:hover{
+    transform: scale(1.1);
 }
 
 /* SCROLLABLE */
@@ -126,18 +155,62 @@ a:hover{
     padding: 10px 5px;
 }
 
+.scrollable .category-title{    
+    margin-bottom: 20px;
+
+}
+
 .scrollable .category-box{
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.scrollable .box .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    transition: opacity .4s;
+}
+
+.scrollable .category-box .box:hover .icon{ 
+    opacity: 1;
+}
+
+.scrollable .category-box .box:hover img{
+    transform: scale(1.2);
+}
+
+.scrollable .category-box i{
+    font-size: 40px;}
+
+.scrollable .category-box a{
+    color: #fff;
 }
 
 .scrollable .category-box .box{
     flex-basis: calc((100%/6) - 10px);
     margin-right: 10px;
 }
+.scrollable .category-box .box .cover{
+    position: relative;
+    overflow: hidden;
+}
 
 .scrollable .category-box .box img{
     max-width: 100%;
+    transition: transform .4s;
+}
+
+.scrollable .category-box .box img:hover{
+    transform: scale(1.2);
 }
 
 /* PLAYER */
@@ -145,7 +218,7 @@ a:hover{
     display: flex;
     justify-content: space-between;
     flex-basis: 50px;
-    background-color: seagreen;
+    background-color: #272727;
 }
 
 .player .left,
@@ -154,7 +227,7 @@ a:hover{
 }
 
 .player .center{
-    width: 300px;
+    width: 40%;
 }
 
 .player>div{
