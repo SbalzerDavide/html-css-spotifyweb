@@ -319,12 +319,17 @@ a:hover{
     opacity: 1;
 }
 
+.scrollable .category-box .box i:hover{
+    transform: scale(1.2);
+}
+
 .scrollable .category-box .box:hover img{
     transform: scale(1.2);
 }
 
 .scrollable .category-box i{
     font-size: 40px;
+    transition: transform .4s;
 }
 
 /* PLAYER */
@@ -389,13 +394,17 @@ a:hover{
     background-color: transparent;
     border: transparent;
     color: #fff;
-    
 }
 
 .player .center button i{
     font-size: 20px;
     margin: 0 10px;
     cursor: pointer;
+    transition: transform .3s;
+}
+
+.player .center button i:hover{
+    transform: scale(1.15);
 }
 
 .player .center button i.big{
@@ -413,9 +422,6 @@ a:hover{
     padding: 8px 0;
 }
 
-
-
-
 .player .time-line .line{
     height: 3px;
     width: 70%;
@@ -429,6 +435,21 @@ a:hover{
     height: 3px;
     background: #bababa;
     border-radius: 3px;
+}
+
+/* right */
+.player .right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.player .right-list{
+    display: flex;
+    align-items: center;
+}
+
+.player .right-list li{
+    margin-right: 15px;
 }
 
 /* hover player */
@@ -451,6 +472,44 @@ a:hover{
     background-color: #fff;
     opacity: 0;
 }
+
+.player .right .line{
+    height: 3px;
+    width: 70px;
+    background-color: #535353;
+    border-radius: 3px;
+}
+
+.player .right .line .volume-line{
+    position: relative;
+    width: 30%;
+    height: 3px;
+    background: #bababa;
+    border-radius: 3px;
+}
+
+
+/* hover volume */
+.player .right .line:hover .volume-line .circle{
+    opacity: 1;
+}
+
+.player .right .line:hover .volume-line{
+    background: #acfe2e;
+}
+
+.player .right .line .circle{
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    display: inline-block;
+    height: 12px;   
+    width: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0;
+}
+
 
 
 
