@@ -1,3 +1,4 @@
+/********************** GENERAL *********************/
 *{
     margin: 0;
     padding: 0;
@@ -46,6 +47,7 @@ a:hover{
     color: #fff;
 }
 
+/* utility */
 .text-center{
     text-align: center;
 }
@@ -58,11 +60,7 @@ a:hover{
     border-radius: 50%;
 }
 
-
-
-
-
-
+/* *********************************************************** */
 /* web app */
 .web-app{
     height: 100vh;
@@ -76,7 +74,7 @@ a:hover{
     flex-grow: 1;
 }
 
-/* SIDEBAR */
+/******************************** SIDEBAR ***************************/
 .web-app .sidebar{
     flex-basis: 180px;
     display: flex;
@@ -251,7 +249,7 @@ a:hover{
     padding: 15px 10px;
 }
 
-/* simulation active list */
+/********************* simulation active list ***********************/
 .page .scrollable .active{
     position: relative;
 }
@@ -267,7 +265,7 @@ a:hover{
     width: 25px;
     background-color: #acfe2e;
 }
-
+/* *********************************************************** */
 /* category album */
 .scrollable .category-title{    
     margin-bottom: 20px;
@@ -299,7 +297,7 @@ a:hover{
     transition: transform .4s;
 }
 
-/* animation album */
+/****************** animation album **********************/
 .scrollable .box .icon{
     display: flex;
     align-items: center;
@@ -332,7 +330,7 @@ a:hover{
     transition: transform .4s;
 }
 
-/* PLAYER */
+/**************************** PLAYER ****************************/
 .web-app .player{
     display: flex;
     justify-content: space-between;
@@ -437,22 +435,8 @@ a:hover{
     border-radius: 3px;
 }
 
-/* right */
-.player .right{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.player .right-list{
-    display: flex;
-    align-items: center;
-}
 
-.player .right-list li{
-    margin-right: 15px;
-}
-
-/* hover player */
+/************************* hover player ***************************/
 .player .time-line:hover .line-top .circle{
     opacity: 1;
 }
@@ -472,7 +456,21 @@ a:hover{
     background-color: #fff;
     opacity: 0;
 }
+/* *********************************************************** */
+/* right */
+.player .right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.player .right-list{
+    display: flex;
+    align-items: center;
+}
 
+.player .right-list li{
+    margin-right: 15px;
+}
 .player .right .line{
     height: 3px;
     width: 70px;
@@ -489,7 +487,7 @@ a:hover{
 }
 
 
-/* hover volume */
+/************************* hover volume **************************/
 .player .right .line:hover .volume-line .circle{
     opacity: 1;
 }
@@ -510,18 +508,12 @@ a:hover{
     opacity: 0;
 }
 
-
-
-
-
 /************************** MEDIA QUERY *******************************/
 @media screen and (max-width:992px){
     .scrollable .category-box .box{
         flex-basis: calc((100%/4) - 10px);
         margin-right: 10px;
     }
-    
-
 }
 
 @media screen and (max-width:768px){
@@ -531,7 +523,6 @@ a:hover{
 
     .sidebar .logo{
         display: none;
-
     }
 
     .scrollable .category-box .box{
@@ -578,9 +569,4 @@ a:hover{
     .sidebar-mobile-bottom .download i{
         font-size: 18px;
     }
-    
-
-
-    
-
 }
