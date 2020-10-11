@@ -11,35 +11,38 @@
 <body>
     <div class="web-app">
         <div class="top-content">
+
+            <!-- SIDEBAR -->
             <div class="sidebar">
+
+                <!-- menu sidebar -->
                 <div class="sidebar-menu">
+                    <!-- logo -->
                     <div class="logo">
                         <a href="#">
                             <img src="./img/logo.svg" alt="logo spotift">
                         </a>
                     </div>
+                    <!-- menu -->
                     <div class="menu">
                         <ul>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-home"></i>
-                                    Home
-                                </a>
+                            <li class="active">
+                                <div class="home-active">
+                                    <img src="./img/home.svg" alt="home icon">
+                                    <a href="#">Home</a>
+                                </div>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fas fa-search"></i>
-                                    Cerca
-                                </a>
+                                <img src="./img/search.svg" alt="search icon">
+                                <a href="#">Cerca</a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="fas fa-bookmark"></i>
-                                    La tua libreria
-                                </a>
+                                <img src="./img/libreria.svg" alt="libreria icon">
+                                <a href="#">La tua libreria</a>
                             </li>
                         </ul>
                     </div>
+                    <!-- playlit -->
                     <div class="playlist">
                         <h5>PLAYLIST</h5>
                         <div class="new-playlist">
@@ -69,8 +72,9 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
+
+                <!-- sidebar bottom -->
                 <div class="sidebar-bottom">
                     <a class="download" href="#">
                         <i class="far fa-arrow-alt-circle-down"></i>
@@ -84,21 +88,54 @@
                         </div>
                         <h3>John Doe</h3>
                     </div>
+                </div>
 
-
+                <!-- sidebar only for mobile -->
+                <div class="sidebar-mobile">
+                    <div class="sidebar-mobile-top">
+                        <a href="#">
+                            <img src="./img/logo-small.svg" alt="logo small">
+                        </a>
+                        <a href="#">
+                            <img src="./img/home.svg" alt="logo home">
+                        </a>
+                        <a href="#">
+                            <img src="./img/search.svg" alt="logo search">
+                        </a>
+                        <a href="#">
+                            <img src="./img/libreria.svg" alt="logo libreria">
+                        </a>
+                    </div>
+                    <div class="sidebar-mobile-bottom">
+                        <a class="download" href="#">
+                            <i class="far fa-arrow-alt-circle-down"></i>
+                        </a>
+                        <div class="profile-icon">
+                            <a href="#">
+                                <img src="./img/profile.svg" alt="profile image">
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <!-- PAGE -->
             <div class="page">
+
+                <!-- top transparent -->
                 <div class="page-top-bar">  
                         <a class="button color-white" href="#">EFFETTUA L'UPGRADE</a>
                 </div>
 
+                <!-- scrollable -->
                 <div class="scrollable">
+                    <!-- nav list -->
                     <nav>
                         <ul class="top-list">
-                            <li>
-                                <a href="#">in evidenza</a>
+                            <li class="active">
+                                <div class="list-active">
+                                    <a href="#">in evidenza</a>
+                                </div>
                             </li>
                             <li>
                                 <a href="#">podcast</a>
@@ -117,6 +154,7 @@
                             </li>
                         </ul>
                     </nav>
+                    <!-- album -->
                     <div class="category">
                         <div class="category-title">
                             <h2>Recently played</h2>
@@ -264,17 +302,66 @@
             </div>
 
         </div>
-        <div class="player">
-            <div class="left">
 
+        <!-- PLAYER -->
+        <footer class="player">
+            <!-- left -->
+            <div class="left">
+                <div class="information">
+                    <img src="./img/sinister.jpeg" alt="sinister album">
+                    <div class="title">
+                        <h3>Sinister</h3>
+                        <h4>Brano nome</h4>
+                    </div>
+                </div>
+                <div class="add">
+                    <a href="#">
+                        <i class="far fa-heart"></i>
+                    </a>
+                    <a href="#">
+                        <i class="far fa-folder"></i>
+                    </a>
+                </div>
             </div>
+            <!-- center -->
             <div class="center">
+                <!-- commands -->
+                <div class="commands">   
+                    <button>
+                        <i class="fas fa-random"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-step-backward"></i>
+                    </button>
+                    <button>
+                        <i class="far fa-play-circle big"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-step-forward"></i>
+                    </button>
+                    <button>
+                        <i class="fas fa-redo-alt"></i>
+                    </button>
+                </div>
+                <div class="time-line">
+                    <div class="time">
+                        0:25
+                    </div>
+                    <div class="line">
+
+                    </div>
+                    <div class="duration">
+                        4:35
+                    </div>
+
+
+                </div>
 
             </div>
             <div class="right">
 
             </div>
-        </div>
+        </footer>
 
     </div>
     

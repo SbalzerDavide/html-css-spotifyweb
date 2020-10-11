@@ -12,7 +12,6 @@ body{
 /* typography */
 h2{
     line-height: 35px;
-
 }
 
 h3{
@@ -38,11 +37,11 @@ li{
 
 a{
     text-decoration: none;
-    color: #75787d;
     font-size: 12px; 
     transition: color .4s;       
-
+    color: #75787d;
 }
+
 a:hover{
     color: #fff;
 }
@@ -64,7 +63,7 @@ a:hover{
 
 
 
-
+/* web app */
 .web-app{
     height: 100vh;
     display: flex;
@@ -77,11 +76,9 @@ a:hover{
     flex-grow: 1;
 }
 
-
-
 /* SIDEBAR */
 .web-app .sidebar{
-    flex-basis: 150px;
+    flex-basis: 180px;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -106,11 +103,26 @@ a:hover{
     padding: 3px 0;
 }
 
-.sidebar-menu .menu i{
-    font-size: 18px;
-    vertical-align: top;
-    width: 20px;
+.sidebar-menu .menu img{
+    height: 18px;
+    vertical-align: middle;
     text-align: center;
+}
+
+/* simulation active sidebar menu */
+.sidebar-menu .menu .active{
+    position: relative;
+}
+
+.sidebar-menu .menu .home-active::before{    
+    position: absolute;
+    top: -2px;
+    left: -10px;
+    content: '';
+    display: inline-block;
+    height: 24px;
+    width: 2px;
+    background-color: #acfe2e;
 }
 
 /* playlist */
@@ -136,10 +148,7 @@ a:hover{
     margin-top: 8px;
 }
 
-
-
-
-/* bottom */
+/* sidebar bottom */
 .sidebar .sidebar-bottom{   
     flex-basis: 50px;
 }
@@ -150,7 +159,6 @@ a:hover{
     border-bottom: 1px solid #75787d;
     padding-bottom: 5px ;
     margin-bottom: 10px;
-
 }
 
 .sidebar-bottom .profile{
@@ -162,7 +170,8 @@ a:hover{
     margin: 0 0 0 6px;
 }
 
-.sidebar-bottom .profile-icon{
+.sidebar-bottom .profile-icon,
+.sidebar-mobile-bottom .profile-icon{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,13 +181,15 @@ a:hover{
     background-color: #75787d;
 }
 
-.sidebar-bottom .profile-icon img{
+.sidebar-bottom .profile-icon img,
+.sidebar-mobile-bottom .profile-icon img{
     height: 20px;
 }
 
-
-
-
+/* mobile */
+.sidebar-mobile{
+    display: none;
+}
 
 /* PAGE */
 .web-app .page{
@@ -187,6 +198,7 @@ a:hover{
     position: relative;
 }
 
+/* top transparent */
 .web-app .page-top-bar{
     display: flex;
     align-items: center;
@@ -228,15 +240,35 @@ a:hover{
 
 .scrollable .top-list{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin: 0 20px ;
     font-size: 15px;
     text-transform: uppercase;
 }
 
 .scrollable .top-list li{
-    padding: 10px 5px;
+    padding: 15px 10px;
 }
 
+/* simulation active list */
+.page .scrollable .active{
+    position: relative;
+}
+
+.page .scrollable .list-active::before{    
+    position: absolute;
+    top: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    display: inline-block;
+    height: 2px;
+    width: 25px;
+    background-color: #acfe2e;
+}
+
+/* category album */
 .scrollable .category-title{    
     margin-bottom: 20px;
 }
@@ -254,6 +286,7 @@ a:hover{
 .scrollable .category-box .box{
     flex-basis: calc((100%/6) - 10px);
     margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .scrollable .category-box .box .cover{
@@ -304,7 +337,7 @@ a:hover{
 
 .player .left,
 .player .right{
-    width: 150px;
+    width: 180px;
 }
 
 .player .center{
@@ -313,10 +346,83 @@ a:hover{
 
 .player>div{
     height: 100%;
-    background-color: thistle;
-
 }
 
+/* left */
+.player .left{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+}
+
+.player .left .information{
+    display: flex;
+    align-items: center;
+}
+
+.player .left .information h3{
+    margin: 0;
+}
+
+.player .left .add i{
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.player .left img{
+    height: 30px;
+    margin-right: 5px;
+}
+
+/* center */
+/* commands */
+.player .commands{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.player .center button{
+    background-color: transparent;
+    border: transparent;
+    color: #fff;
+    
+}
+
+.player .center button i{
+    font-size: 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.player .center button i.big{
+    font-size: 30px;
+    margin: 5px 20px;
+}
+
+/* time-line */
+.player .time-line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #bababa;
+    padding: 8px 0;
+}
+
+.player .time-line .line{
+    height: 3px;
+    width: 70%;
+    background-color: #535353;
+    border-radius: 3px;
+}
+
+
+
+
+/************************** MEDIA QUERY *******************************/
 @media screen and (max-width:992px){
     .scrollable .category-box .box{
         flex-basis: calc((100%/4) - 10px);
@@ -328,8 +434,7 @@ a:hover{
 
 @media screen and (max-width:768px){
     .web-app .sidebar{
-        flex-basis: 10px;
-
+        flex-basis: 50px;
     }
 
     .sidebar .logo{
@@ -342,10 +447,46 @@ a:hover{
         margin-right: 10px;
     }
 
-
-    .playlist{
+    /* sidebar mobile */
+    .sidebar-menu,
+    .sidebar-bottom{
         display: none;
     }
+
+    .sidebar-mobile{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-mobile-top{
+        flex-grow: 1;
+        display: flex;  
+        flex-direction: column;
+        align-items: center;    
+    }
+
+    .sidebar-mobile-top img{      
+        height: 25px;
+        margin-bottom: 8px;
+    }
+
+    .sidebar-mobile-bottom{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;  
+    }
+
+    .sidebar-mobile-bottom .download{
+        display: inline-block;
+        padding-bottom: 5px ;
+        margin-bottom: 10px;
+    }
+
+    .sidebar-mobile-bottom .download i{
+        font-size: 18px;
+    }
+    
 
 
     
