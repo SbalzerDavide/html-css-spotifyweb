@@ -378,6 +378,7 @@ a:hover{
 /* center */
 /* commands */
 .player .commands{
+    padding-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -412,11 +413,43 @@ a:hover{
     padding: 8px 0;
 }
 
+
+
+
 .player .time-line .line{
     height: 3px;
     width: 70%;
     background-color: #535353;
     border-radius: 3px;
+}
+
+.player .time-line .line .line-top{
+    position: relative;
+    width: 30%;
+    height: 3px;
+    background: #bababa;
+    border-radius: 3px;
+}
+
+/* hover player */
+.player .time-line:hover .line-top .circle{
+    opacity: 1;
+}
+
+.player .time-line:hover .line-top{
+    background: #acfe2e;
+}
+
+.player .time-line .line .circle{
+    position: absolute;
+    right: -6px;
+    top: -4px;
+    display: inline-block;
+    height: 12px;   
+    width: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0;
 }
 
 
